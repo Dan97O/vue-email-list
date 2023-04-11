@@ -14,13 +14,18 @@ createApp({
       emails: [],
     }
   },
-  mounted() {
-    for (let i = 0; i < this.numberEmails; i++) {
-      axios
-        .get(this.url)
-        .then(response => {
-          this.emails.push(response.data.response);
-        })
+  methods: {
+    emailGenerated() {
+      for (let i = 0; i < this.numberEmails; i++) {
+        axios
+          .get(this.url)
+          .then(response => {
+            this.emails.push(response.data.response);
+          })
+      }
     }
+  },
+  mounted() {
+    this.emailGenerated();
   }
 }).mount('#app')
