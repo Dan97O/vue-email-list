@@ -5,15 +5,22 @@ Attraverso l'apposita API di Boolean https://flynn.boolean.careers/exercises/api
 */
 
 const { createApp } = Vue
-    
-    createApp({
-      data() {
-        return {
-          
-        }
-      },
 
-      mounted(){
-     
-      }
-    }).mount('#app')
+createApp({
+  data() {
+    return {
+      numberEmails: 10,
+      url: 'https://flynn.boolean.careers/exercises/api/random/mail',
+      emails: [],
+    }
+  },
+  mounted() {
+    for (let i = 0; i < this.numberEmails; i++) {
+      axios
+        .get(this.url)
+        .then(response => {
+          this.emails.push(response.data.response);
+        })
+    }
+  }
+}).mount('#app')

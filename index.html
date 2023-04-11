@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>email-list</title>
 </head>
+
 <body>
-  
-
-
-
-
-
-
-
-
 
   <div id="app">
-
-   
-  
+    <h1>RANDOM EMAIL</h1>
+    <h3>Email generate: {{numberEmails}}</h3>
+    <ul>
+      <li v-for="mail in emails">
+        <h2>{{mail}}</h2>
+      </li>
+    </ul>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- /#app -->
 
   <!-- Axios CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js" integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js"
+    integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- VueJs -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- Js -->
   <script src="./assets/js/app.js"></script>
 </body>
+
 </html>
